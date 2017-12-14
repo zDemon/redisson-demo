@@ -1,0 +1,27 @@
+server:
+  port: 8888
+
+spring:
+  # สýพÝิด
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/demon?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  # jpa
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  jooq:
+    sql-dialect: org.hibernate.dialect.MySQL5Dialect
+
+  # devtools
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+
