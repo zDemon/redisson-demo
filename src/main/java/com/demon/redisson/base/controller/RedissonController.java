@@ -25,23 +25,25 @@ public class RedissonController {
     SingleDistributedLockTemplate singleDistributedLockTemplate;
 
     @Resource
-    private RedisTemplate<String, User> redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
     @GetMapping("hello")
     public String hello() {
         String key = "redisson:user";
         User user;
-        redisTemplate.opsForValue().set("foo", new User());
-        if(redisTemplate.hasKey(key)) {
-            user = redisTemplate.opsForValue().get(key);
-        } else {
+        redisTemplate.opsForValue().set("foo", "test");
+        redisTemplate.opsForValue().set("foo1", "22");
+        //redisTemplate.opsForValue().set("foo2", "中文啊哈哈");
+        //if(redisTemplate.hasKey(key)) {
+            user = (User) redisTemplate.opsForValue().get(key);
+        /*} else {
             user = new User();
             user.setId(1000L);
             user.setName("我是测试A君");
             redisTemplate.opsForValue().set(key, user);
-        }
+        }*/
 
-        return JSONObject.toJSONString(user);
+        return (String) redisTemplate.opsForValue().get("foo2");
 
         /*String result = singleDistributedLockTemplate.lock(new DistributedLockCallback<String>() {
             @Override
