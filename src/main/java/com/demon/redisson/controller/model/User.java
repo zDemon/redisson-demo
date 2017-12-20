@@ -1,4 +1,4 @@
-package com.demon.redisson.base.controller.model;
+package com.demon.redisson.controller.model;
 
 import java.io.Serializable;
 

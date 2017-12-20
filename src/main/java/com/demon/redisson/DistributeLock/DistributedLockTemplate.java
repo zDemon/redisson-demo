@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public interface DistributedLockTemplate {
 
     long DEFAULT_WAIT_TIME = 30;
-    long DEFAULT_TIMEOUT   = 5;
+    long DEFAULT_TIMEOUT   = 20;
     TimeUnit DEFAULT_TIME_UNIT = TimeUnit.SECONDS;
 
     /**

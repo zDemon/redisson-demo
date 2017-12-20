@@ -27,6 +27,7 @@ public class SingleDistributedLockTemplate implements DistributedLockTemplate {
 
     @Override
     public <T> T lock(DistributedLockCallback<T> callback, boolean fairLock) {
+        System.out.println(Thread.currentThread().getName() + "进入");
         return lock(callback, DEFAULT_TIMEOUT, DEFAULT_TIME_UNIT, fairLock);
     }
 
