@@ -1,6 +1,6 @@
 package com.demon.redisson.controller;
 
-import com.demon.redisson.DistributeLock.SingleDistributedLockTemplate;
+import com.demon.redisson.distributeLock.SingleDistributedLockTemplate;
 import com.demon.redisson.service.LockService;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;

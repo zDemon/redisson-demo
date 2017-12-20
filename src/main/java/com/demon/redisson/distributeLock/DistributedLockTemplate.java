@@ -1,4 +1,4 @@
-package com.demon.redisson.DistributeLock;
+package com.demon.redisson.distributeLock;
 
 import java.util.concurrent.TimeUnit;
 

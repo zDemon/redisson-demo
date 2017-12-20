@@ -15,7 +15,7 @@ public class LockService {
 
     @DistributedLock(lockName = "test", fairLock = true)
     public void doTest() throws InterruptedException {
-        if(NUMBER>=9)
+        if(NUMBER == 10)
         Thread.sleep(11000L);
         System.out.println(Thread.currentThread().getName() + " :" + --NUMBER);
     }

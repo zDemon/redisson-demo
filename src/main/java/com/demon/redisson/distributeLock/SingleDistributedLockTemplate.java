@@ -1,4 +1,4 @@
-package com.demon.redisson.DistributeLock;
+package com.demon.redisson.distributeLock;
 
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;

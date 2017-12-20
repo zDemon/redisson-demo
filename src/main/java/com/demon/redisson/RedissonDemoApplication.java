@@ -1,7 +1,7 @@
 package com.demon.redisson;
 
-import com.demon.redisson.DistributeLock.DistributedLockTemplate;
-import com.demon.redisson.DistributeLock.SingleDistributedLockTemplate;
+import com.demon.redisson.distributeLock.DistributedLockTemplate;
+import com.demon.redisson.distributeLock.SingleDistributedLockTemplate;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
